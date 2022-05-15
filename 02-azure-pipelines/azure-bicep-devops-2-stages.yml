@@ -45,17 +45,11 @@ stages:
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          - task: AzureCLI@2
-      inputs:
-    azureSubscription: 'Azure cli'
-    scriptType: 'bash'
-    scriptLocation: 'inlineScript'
-    inlineScript: |
-      az --version
-                az group create --name $(resourceGroupName) --location $(location)
-                az deployment group what-if --resource-group $(resourceGroupName) \
-                  --template-file $(templateFile) \
-                  --parameters webAppName=$(webAppName)
+          az --version
+          az group create --name $(resourceGroupName) --location $(location)
+          az deployment group what-if --resource-group $(resourceGroupName) \
+            --template-file $(templateFile) \
+            --parameters webAppName=$(webAppName)
 
 - stage: deployBicep
   jobs:
