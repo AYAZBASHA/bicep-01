@@ -4,7 +4,7 @@ trigger: none
 # - main
 
 variables:
-  resourceGroupName: 'rg-bicep-demo-0023'
+  resourceGroupName: 'Azure-POC-Lab-Batch_3-4'
   location: 'westeurope'
   webAppName: 'bicep0023'
   templateFile: '01-bicep-webapp/webapp-linux.bicep'
@@ -76,7 +76,8 @@ stages:
     - task: AzureCLI@2
       displayName: Deploy Bicep To Azure
       inputs:
-        azureSubscription: 'Microsoft-Azure-0(17b12858-3960-4e6f-a663-a06fdae23428)'
+        azureSubscription: 'Wissen Azure POC LAB
+9fafb975-d34e-4e5d-8f6b-3845604321b6'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
