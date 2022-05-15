@@ -41,7 +41,7 @@ stages:
     - task: AzureCLI@2
       displayName: Preview Bicep Changes
       inputs:
-        azureSubscription: '9fafb975-d34e-4e5d-8f6b-3845604321b6'
+        azureSubscription: 'Wissen Azure POC LAB'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
@@ -76,7 +76,7 @@ stages:
     - task: AzureCLI@2
       displayName: Deploy Bicep To Azure
       inputs:
-        azureSubscription: '9fafb975-d34e-4e5d-8f6b-3845604321b6'
+        azureSubscription: 'Wissen Azure POC LAB'
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
