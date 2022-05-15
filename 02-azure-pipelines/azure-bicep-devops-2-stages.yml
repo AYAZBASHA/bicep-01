@@ -46,7 +46,7 @@ stages:
         scriptLocation: 'inlineScript'
         inlineScript: |
           - task: AzureCLI@2
-  inputs:
+      inputs:
     azureSubscription: 'Azure cli'
     scriptType: 'bash'
     scriptLocation: 'inlineScript'
