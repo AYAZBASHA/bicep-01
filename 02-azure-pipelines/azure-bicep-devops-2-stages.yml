@@ -47,7 +47,7 @@ stages:
         inlineScript: |
           az --version
           az group create --name $(Azure-POC-Lab-Batch_3-4) --location $(location)
-          az deployment group what-if --resource-group $(Azure-POC-Lab-Batch_3-4) \
+          az deployment group what-if --resource-group $(resourceGroupName) \
             --template-file $(templateFile) \
             --parameters webAppName=$(webAppName)
 
@@ -80,6 +80,6 @@ stages:
         scriptType: 'bash'
         scriptLocation: 'inlineScript'
         inlineScript: |
-          az deployment group create --resource-group $(Azure-POC-Lab-Batch_3-4) \
+          az deployment group create --resource-group $(resourceGroupName) \
             --template-file $(templateFile) \
             --parameters webAppName=$(webAppName)
